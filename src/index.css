@@ -3,7 +3,7 @@
     --fondo: #f9c131;
     --negro: #121212;
     --blanco: #f6f6f6;
-    --fuente: 'Poppins', sans-serif;
+    --fuente: 'Rubik Variable', sans-serif;;
 }
 
 html {
@@ -81,4 +81,9 @@ body {
     .juego {
         padding: 2rem 0;
     }
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
 }

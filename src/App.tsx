@@ -1,4 +1,6 @@
 import Carta from './components/Carta'
+
+import '@fontsource-variable/rubik'
 import { elementos, generarId } from './data'
 
 // const elementosDesordenados = [...elementos, ...elementos].sort(() => Math.floor(Math.random() - 0.5))
@@ -53,6 +55,7 @@ function App () {
     }
     return (
         <>
+            <h1 className='titulo'> JUEGO DE MEMORAMA</h1>
             <ul className='juego'>
                 {elementosDesordenados.map(elemento => (
                     <Carta
