@@ -1,0 +1,91 @@
+:root {
+    /* --colorPrincipal: #f9c131; */
+    --fondo: #f9c131;
+    --negro: #121212;
+    --blanco: #f6f6f6;
+    --fuente: 'Poppins', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    color: var(--negro);
+    font-size: 1.6rem;
+    font-family: var(--fuente);
+    background-color: var(--fondo);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cambiar color al selecionar texto */
+/* ::selection {
+    background: var(--principal);
+    color: var(--blanco);
+} */
+
+.contenedor-icono {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.icono {
+    shape-rendering:geometricPrecision;
+    text-rendering:geometricPrecision;
+    image-rendering:optimizeQuality;
+    fill-rule:evenodd;
+    clip-rule:evenodd
+}
+
+/* == DOCUMENTO == */
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    width: min(90%, 80rem);
+    margin: 0 auto;
+}
+
+.carta {
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    width: 7.5rem;
+    height: 8rem;
+    box-shadow: rgba(60, 64, 67, .1) 0 .1rem .2rem 0, 
+                rgba(60, 64, 67, .1) 0 .1rem .3rem .1rem;
+
+    display: grid;
+    place-items: center;
+    user-select: none;
+    position: relative;
+}
+
+.carta-imagen {
+    position: absolute;
+    width: 75%;
+    filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, 0.1));
+}
+
+.carta-pregunta {
+    position: absolute;
+}
