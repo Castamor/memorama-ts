@@ -3,11 +3,15 @@ import './Carta.css'
 
 interface Props {
     nombre: string
+    handleClick: (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => void
 }
 
-const Carta = ({ nombre }: Props) => {
+const Carta = ({ nombre, handleClick }: Props) => {
     return (
-        <li className='carta active'>
+        <li
+            className='carta'
+            onClick={(e) => { handleClick(e) }}
+        >
             <img
                 className="carta-contenido carta-imagen"
                 src={`/${nombre}.png`}
