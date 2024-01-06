@@ -73,7 +73,7 @@ body {
     cursor: pointer;
 
     position: relative;
-    transition: transform .8s;
+    transition: transform .5s;
     transform-style: preserve-3d;
 }
 
@@ -101,4 +101,8 @@ body {
 .carta-imagen {
     transform: rotateY(180deg);
     padding: 1rem;
+}
+
+.carta-pregunta {
+    padding: .5rem;
 }

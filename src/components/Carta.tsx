@@ -5,7 +5,7 @@ const Carta = () => {
         <li className='carta'>
             <img
                 className="carta-contenido carta-imagen"
-                src="/pan.png"
+                src="/zanahoria.png"
                 alt="agua"
                 title="agua"
             />
