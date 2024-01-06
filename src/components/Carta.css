@@ -1,0 +1,48 @@
+.carta {
+    width: 7.5rem;
+    height: 7.5rem;
+    perspective: 100rem;
+    cursor: pointer;
+
+    position: relative;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+}
+
+@media (max-width: 640px) {
+    .carta {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+/* Voltear la carta */
+.carta.active {
+    transform: rotateY(180deg);
+}
+
+.carta-contenido {
+    height: 100%;
+    width: 100%;
+    background-color: var(--blanco);
+    box-shadow: rgba(60, 64, 67, .15) 0 .1rem .2rem 0, rgba(60, 64, 67, .15) 0 .1rem .3rem .1rem;
+    border-radius: 1rem;
+
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    pointer-events: none;
+
+    display: grid;
+    place-items: center;
+}
+
+.carta-imagen {
+    
+    transform: rotateY(180deg);
+    padding: 1rem;
+}
+
+.carta-pregunta {
+    padding: .5rem;
+}

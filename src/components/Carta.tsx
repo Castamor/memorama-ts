@@ -1,13 +1,18 @@
 import QuestionMark from './QuestionMark'
+import './Carta.css'
 
-const Carta = () => {
+interface Props {
+    nombre: string
+}
+
+const Carta = ({ nombre }: Props) => {
     return (
-        <li className='carta'>
+        <li className='carta active'>
             <img
                 className="carta-contenido carta-imagen"
-                src="/zanahoria.png"
-                alt="agua"
-                title="agua"
+                src={`/${nombre}.png`}
+                alt='Carta (No se puede revelar el nombre)'
+                loading='lazy'
             />
             <QuestionMark />
         </li>
