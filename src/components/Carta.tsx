@@ -3,7 +3,12 @@ import QuestionMark from './QuestionMark'
 const Carta = () => {
     return (
         <li className='carta'>
-            <img className="carta-imagen" src="/zanahoria.png" alt="agua" title="agua"/>
+            <img
+                className="carta-contenido carta-imagen"
+                src="/pan.png"
+                alt="agua"
+                title="agua"
+            />
             <QuestionMark />
         </li>
     )

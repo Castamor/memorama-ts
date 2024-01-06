@@ -2,7 +2,7 @@ const QuestionMark = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="carta-pregunta"
+            className="carta-contenido carta-pregunta"
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="#2c3e50"
