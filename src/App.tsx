@@ -1,20 +1,11 @@
-import Carta from './components/Carta'
-
 import '@fontsource-variable/rubik'
-import { elementos, generarId } from './data'
+import Carta from './components/Carta'
+import { formatearArreglo, generarId } from './helpers'
+import { elementos } from './data'
 
-// const elementosDesordenados = [...elementos, ...elementos].sort(() => Math.floor(Math.random() - 0.5))
-
-let elementosDesordenados: string[] = []
-
-for (let i = 0; i < 15; i++) {
-    elementosDesordenados = [...elementosDesordenados, elementos[i]]
-}
-
-elementosDesordenados = [...elementosDesordenados, ...elementosDesordenados].sort(() => Math.floor(Math.random() - 0.5))
-
-let movimientos = 0
+const elementosDesordenados = formatearArreglo(elementos, 27)
 let cartasClickeadas: HTMLElement[] = []
+let movimientos = 0
 let aciertos = 0
 
 function resetearValores () {

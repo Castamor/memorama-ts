@@ -63,6 +63,3 @@ export const elementos = [
     'vino',
     'zanahoria'
 ]
-
-export const generarId = () => Math.random().toString(36).substring(2) + Date.now().toString(36)
-export const letraMayus = (texto: string) => texto.charAt(0).toUpperCase() + texto.slice(1)

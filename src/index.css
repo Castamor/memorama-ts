@@ -22,9 +22,10 @@ html {
 
 body {
     color: var(--negro);
+    background-color: var(--fondo);
+
     font-size: 1.6rem;
     font-family: var(--fuente);
-    background-color: var(--fondo);
 }
 
 img {
@@ -60,11 +61,11 @@ ul {
 body {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .contenedor {
-    width: min(90%, 120rem);
+    width: min(90%, 80rem);
     margin: 0 auto;
 }
 
