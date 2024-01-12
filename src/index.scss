@@ -1,0 +1,83 @@
+@import './scss/_plantilla.scss';
+
+:root {
+    /* --colorPrincipal: #f9c131; */
+    --fondo: #f9c131;
+    --negro: #121212;
+    --blanco: #f6f6f6;
+    --fuente: 'Rubik Variable', sans-serif;
+
+    --btnStart: rgb(255, 56, 86);
+    --btnStartBorde:rgb(201, 46, 70);
+    --btnReiniciar: rgb(80, 139, 255);
+    --btnReiniciarBorde: rgb(63, 108, 231);
+}
+
+/* == DOCUMENTO == */
+body {
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+}
+
+.contenedor {
+    width: min(90%, 80rem);
+    margin: 0 auto;
+}
+
+.juego {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+@media (max-width: 64rem) {
+    .juego {
+        padding: 2rem 0;
+    }
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton-empezar,
+.boton-reiniciar {
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    letter-spacing: .15rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.boton-empezar:active,
+.boton-reiniciar:active {
+    transform: translateY(.5rem);
+    transition: 200ms;
+}
+
+.boton-empezar {
+    background-color: var(--btnStart);
+    box-shadow: var(--btnStartBorde) 0 .5rem 0 0;
+}
+
+.boton-empezar:active {
+    background-color: var(--btnStart);
+    box-shadow: var(--btnStartBorde) 0 0 0 0;
+}
+
+.boton-reiniciar {
+    background-color: var(--btnReiniciar);
+    box-shadow: var(--btnReiniciarBorde) 0 .5rem 0 0;
+}
+
+.boton-reiniciar:active {
+    background-color: var(--btnReiniciar);
+    box-shadow: var(--btnReiniciarBorde) 0 0 0 0;
+}

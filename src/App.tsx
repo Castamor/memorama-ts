@@ -46,8 +46,18 @@ function App () {
     }
     return (
         <>
-            <h1 className='titulo'> JUEGO DE MEMORAMA</h1>
-            <ul className='juego'>
+            <header>
+                <h1 className='titulo'>JUEGO DE MEMORAMA</h1>
+                <button
+                    type='button'
+                    className='boton-empezar'
+                >Empezar</button>
+                {/* <button
+                    type='button'
+                    className='boton-reiniciar'
+                >Reiniciar</button> */}
+            </header>
+            {/* <ul className='juego'>
                 {elementosDesordenados.map(elemento => (
                     <Carta
                         key={generarId()}
@@ -55,7 +65,7 @@ function App () {
                         handleClick={handleClick}
                     />
                 ))}
-            </ul>
+            </ul> */}
         </>
     )
 }

@@ -59,5 +59,6 @@
 }
 
 .carta-animacion {
+    pointer-events: none;
     animation: mostrarCarta 6s ease-in-out forwards;
 }
