@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*1rem = 10px */
@@ -13,11 +15,11 @@ html {
 }
 
 body {
-    color: var(--negro);
-    background-color: var(--fondo);
+    color: v.$negro;
+    background-color: v.$amarillo;
 
     font-size: 1.6rem;
-    font-family: var(--fuente);
+    font-family: v.$fuente;
 }
 
 img {

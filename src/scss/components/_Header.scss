@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton-empezar,
+.boton-reiniciar {
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    letter-spacing: .15rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    color: v.$blanco;
+
+    &:active {
+        transform: translateY(.5rem);
+        transition: 200ms;    
+    }
+}
+
+.boton-empezar {
+    background-color: v.$rojo;
+    box-shadow: v.$rojoOscuro 0 .5rem 0 0;
+
+    &:active {
+        background-color: v.$rojo;
+        box-shadow: v.$rojoOscuro 0 0 0 0;
+    }   
+}
+
+.boton-reiniciar {
+    background-color: v.$azul;
+    box-shadow: v.$azulOscuro 0 .5rem 0 0;
+    
+    &:active {
+        background-color: v.$azul;
+        box-shadow: v.$azulOscuro 0 0 0 0;
+    }
+}

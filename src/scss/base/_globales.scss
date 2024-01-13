@@ -1,0 +1,10 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+}
+
+.contenedor {
+    width: min(90%, 80rem);
+    margin: 0 auto;
+}
