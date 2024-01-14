@@ -2,9 +2,23 @@ body {
     display: grid;
     place-items: center;
     height: 100dvh;
+    padding: 5rem 0;
 }
 
 .contenedor {
     width: min(90%, 80rem);
     margin: 0 auto;
+}
+
+.icono {
+    display: grid;
+    place-items: center;
+}
+
+.icono-render {
+    shape-rendering:geometricPrecision;
+    text-rendering:geometricPrecision;
+    image-rendering:optimizeQuality;
+    fill-rule:evenodd;
+    clip-rule:evenodd
 }

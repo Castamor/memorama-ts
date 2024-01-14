@@ -35,22 +35,8 @@ button {
     border: none;
 }
 
-/* Cambiar color al selecionar texto */
-/* ::selection {
-    background: var(--principal);
-    color: var(--blanco);
-} */
-
-.contenedor-icono {
-    display: grid;
-    place-items: center;
-    width: 100%;
-}
-
-.icono {
-    shape-rendering:geometricPrecision;
-    text-rendering:geometricPrecision;
-    image-rendering:optimizeQuality;
-    fill-rule:evenodd;
-    clip-rule:evenodd
+// Cambiar color al seleccionar texto
+::selection {
+    background: v.$negro;
+    color: v.$blanco;
 }

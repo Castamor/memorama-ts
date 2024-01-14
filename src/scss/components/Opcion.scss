@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.select {
+    position: relative;
+
+    .opciones {
+        display: none;
+        position: absolute;
+        background-color: rgb(249, 249, 249);
+        box-shadow: rgba(60, 64, 67, .15) 0 .1rem .2rem 0, rgba(60, 64, 67, .15) 0 .1rem .3rem .1rem;
+        padding: .8rem .8rem;
+        margin-top: .5rem;
+        border-radius: .5rem;
+
+        li {
+            width: 100%;
+            padding: .5rem;
+            border-radius: .35rem;
+            cursor: pointer;
+
+            @include m.hover {
+                &:hover {
+                    transition: background-color 200ms ease;
+                    color: v.$blanco;
+                    background-color: v.$negro;
+                }
+            }
+
+            &.active {
+                transition: background-color 200ms ease;
+                color: v.$blanco;
+                background-color: v.$negro;
+            }
+        }
+    }
+
+    &.active {
+        .opciones {
+            @include m.flex {justify-content: start; gap: .5rem;}
+        }
+    }
+}

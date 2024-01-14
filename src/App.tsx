@@ -10,7 +10,7 @@ function App () {
     return (
         <>
             <Header />
-            <Juego elementosDesordenados={elementosDesordenados}/>
+            {/* <Juego elementosDesordenados={elementosDesordenados}/> */}
         </>
     )
 }

@@ -16,3 +16,26 @@
         @content
     }
 };
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    @content
+};
+
+@mixin grid {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    @content
+};
+
+@mixin hover {
+    @media (hover: hover) {
+        @content  
+    }
+}

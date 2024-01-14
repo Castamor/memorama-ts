@@ -1,4 +1,4 @@
-import QuestionMark from './QuestionMark'
+import { Pregunta } from './Iconos'
 import { useEffect, useRef } from 'react'
 
 interface Props {
@@ -35,7 +35,7 @@ const Carta = ({ nombre, handleClick }: Props) => {
                 src={`/${nombre}.png`}
                 alt='Carta (No se puede revelar el nombre)'
             />
-            <QuestionMark className='carta__contenido carta__pregunta' />
+            <Pregunta className='carta__contenido carta__pregunta' />
         </li>
     )
 }

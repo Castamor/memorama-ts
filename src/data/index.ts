@@ -1,3 +1,27 @@
+import { type Nivel } from '../types'
+
+export const STRINGS = {
+    facil: 'fácil',
+    normal: 'normal',
+    dificil: 'difícil',
+    extremo: 'extremo'
+}
+
+export const NIVELES: Nivel[] = [
+    {
+        titulo: STRINGS.facil,
+        tiempo: 180
+    },
+    {
+        titulo: STRINGS.normal,
+        tiempo: 120
+    },
+    {
+        titulo: STRINGS.dificil,
+        tiempo: 90
+    }
+]
+
 export const elementos = [
     'agua',
     'aguacate',
