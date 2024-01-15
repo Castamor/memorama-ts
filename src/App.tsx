@@ -1,6 +1,6 @@
 import '@fontsource-variable/rubik'
 import { formatearArreglo } from './helpers'
-import { elementos } from './data'
+import { VALORES, elementos } from './data'
 import Juego from './components/Juego'
 import Header from './components/Header'
 

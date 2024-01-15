@@ -1,16 +1,22 @@
-import { letraMayus } from '../helpers'
+import { letraMayus, removerClaseActive } from '../helpers'
+import { useStorage } from '../store'
 import { type Nivel } from '../types'
 
-const Opcion = ({ titulo }: Nivel) => {
+const Opcion = ({ nivel, tiempo }: Nivel) => {
+    const setNivel = useStorage(state => state.setNivel)
+    const setTiempo = useStorage(state => state.setTiempo)
+
     const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        const boton = document.querySelector('.boton')?.querySelector('p')
-        if (boton !== undefined && boton !== null) {
-            boton.textContent = e.currentTarget.textContent
-        }
+        const opciones = document.querySelectorAll('.opciones li')
+        removerClaseActive(e, opciones)
+
+        e.currentTarget.classList.add('active')
+        setNivel(nivel)
+        setTiempo(tiempo)
     }
 
     return (
-        <li onClick={handleClick}><p>{letraMayus(titulo)}</p></li>
+        <li onClick={handleClick}><p>{letraMayus(nivel)}</p></li>
     )
 }
 

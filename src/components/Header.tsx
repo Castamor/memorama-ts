@@ -1,7 +1,10 @@
+import { formatearMinutos } from '../helpers'
+import { useStorage } from '../store'
 import { Errores, Tiempo } from './Iconos'
 import Select from './Select'
 
 const Header = () => {
+    const tiempo = useStorage(state => state.tiempo)
     return (
         <>
             <header>
@@ -12,12 +15,12 @@ const Header = () => {
 
                 <div className='estadisticas'>
                     <p className='tiempo'>
-                        <span className='icono'><Tiempo/> </span>
-                        00:59
+                        <Tiempo className='icono'/>
+                        <span>{formatearMinutos(tiempo)}</span>
                     </p>
                     <p className='errores'>
-                        <span className='icono'><Errores/> </span>
-                        02
+                        <Errores className='icono'/>
+                        <span>00</span>
                     </p>
                 </div>
             </section>

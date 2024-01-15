@@ -1,8 +1,12 @@
 import { BiCaretDown, BiCaretUp } from 'react-icons/bi'
-import { NIVELES } from '../data'
+import { VALORES } from '../data'
 import Opcion from './Opcion'
+import { type Nivel } from '../types'
+import { useStorage } from '../store'
+import { letraMayus } from '../helpers'
 
 const Select = () => {
+    const nivel = useStorage(state => state.nivel)
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const select = e.currentTarget
         select.classList.toggle('active')
@@ -20,14 +24,14 @@ const Select = () => {
     return (
         <div className='select' onClick={handleClick}>
             <button type='button' className='boton'>
-                <p>Normal</p>
+                <p>{letraMayus(nivel)}</p>
                 <span className='icono'><BiCaretDown/></span>
             </button>
 
             <ul className='opciones'>
-                {NIVELES.map(nivel => (
+                {Object.values(VALORES).map((nivel: Nivel) => (
                     <Opcion
-                        key={nivel.titulo}
+                        key={nivel.nivel}
                         {...nivel}
                     />
                 ))}
