@@ -1,25 +1,4 @@
-import { type Dificultades } from '../types'
-
-export const VALORES: Dificultades = {
-    facil: {
-        nivel: 'fácil',
-        tiempo: 180
-    },
-    normal: {
-        nivel: 'normal',
-        tiempo: 120
-    },
-    dificil: {
-        nivel: 'difícil',
-        tiempo: 90
-    },
-    extremo: {
-        nivel: 'extremo',
-        tiempo: 60
-    }
-}
-
-export const elementos = [
+export const ELEMENTOS = [
     'agua',
     'aguacate',
     'arandanos',

@@ -1,15 +1,16 @@
 import '@fontsource-variable/rubik'
 import { formatearArreglo } from './helpers'
-import { VALORES, elementos } from './data'
+import { VALORES, ELEMENTOS } from './data'
 import Juego from './components/Juego'
-import Header from './components/Header'
+import Menu from './components/Menu'
 
-const elementosDesordenados = formatearArreglo(elementos, 27)
+const elementosDesordenados = formatearArreglo(ELEMENTOS, 27)
 
 function App () {
     return (
         <>
-            <Header />
+            <h1 className='titulo'>JUEGO DE MEMORAMA</h1>
+            <Menu />
             {/* <Juego elementosDesordenados={elementosDesordenados}/> */}
         </>
     )

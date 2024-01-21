@@ -1,21 +1,29 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { type NivelType, type TiempoType } from '../types'
-import { VALORES } from '../data'
+import { ELEMENTOS } from '../data'
 
 interface StorageTipos {
-    nivel: NivelType
-    tiempo: TiempoType
-    setNivel: (nuevoNivel: NivelType) => void
-    setTiempo: (nuevoTiempo: TiempoType) => void
+    cartas: number
+    setCartas: (valor: number) => void
 }
 
 export const useStorage = create<StorageTipos>()(persist(
-    (set) => ({
-        nivel: VALORES.facil.nivel,
-        tiempo: VALORES.facil.tiempo,
-        setNivel: (nuevoNivel: string) => { set(({ nivel: nuevoNivel })) },
-        setTiempo: (nuevoTiempo: number) => { set(({ tiempo: nuevoTiempo })) }
+    (set, get) => ({
+        cartas: 2,
+        setCartas (valor) {
+            let nuevaCantidad: number
+            const cantidadActual = get().cartas
+
+            if (cantidadActual + valor > ELEMENTOS.length) {
+                nuevaCantidad = ELEMENTOS.length
+            } else if (cantidadActual + valor <= 2) {
+                nuevaCantidad = 2
+            } else {
+                nuevaCantidad = cantidadActual + valor
+            }
+
+            set({ cartas: nuevaCantidad })
+        }
     }),
     {
         name: 'memorama-ts'

@@ -4,12 +4,16 @@ import Opcion from './Opcion'
 import { type Nivel } from '../types'
 import { useStorage } from '../store'
 import { letraMayus } from '../helpers'
+import { useState } from 'react'
 
 const Select = () => {
+    const [btnActive, setBtnActive] = useState(false)
     const nivel = useStorage(state => state.nivel)
+
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const select = e.currentTarget
         select.classList.toggle('active')
+        setBtnActive(!btnActive)
 
         const handleClickDocument = (e: MouseEvent) => {
             if (select.classList.contains('active') && !select.contains(e.target as Node)) {
@@ -25,7 +29,7 @@ const Select = () => {
         <div className='select' onClick={handleClick}>
             <button type='button' className='boton'>
                 <p>{letraMayus(nivel)}</p>
-                <span className='icono'><BiCaretDown/></span>
+                <span className='icono'>{btnActive ? <BiCaretUp/> : <BiCaretDown/>}</span>
             </button>
 
             <ul className='opciones'>

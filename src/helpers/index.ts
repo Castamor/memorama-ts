@@ -5,7 +5,7 @@ export function formatearArreglo (arreglo: string[], size: number): string[] {
     let arregloDesordenado: string[] = []
     const setIndexes = new Set<number>()
 
-    // Asegurarme que el numero propuesto no sea mayor al propio arreglo de elementos
+    // Asegurarme que el numero propuesto no sea mayor al propio arreglo de ELEMENTOS
     size = (size > arreglo.length) ? arreglo.length : size
 
     for (let i = 0; i < size; i++) {
@@ -24,10 +24,10 @@ export function formatearArreglo (arreglo: string[], size: number): string[] {
     return arregloDesordenado
 }
 
-export const removerClaseActive = (e: React.MouseEvent<EventTarget>, elementos: NodeListOf<Element>) => {
+export const removerClaseActive = (e: React.MouseEvent<EventTarget>, ELEMENTOS: NodeListOf<Element>) => {
     const currentTarget = e.currentTarget as Element
 
-    elementos.forEach(elemento => {
+    ELEMENTOS.forEach(elemento => {
         if (elemento.classList.contains('active') && elemento !== currentTarget.parentElement) {
             elemento.classList.remove('active')
         }

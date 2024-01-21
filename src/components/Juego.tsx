@@ -1,10 +1,6 @@
 import { generarId } from '../helpers'
 import Carta from './Carta'
 
-interface Props {
-    elementosDesordenados: string[]
-}
-
 let cartasClickeadas: HTMLElement[] = []
 let movimientos = 0
 let aciertos = 0
@@ -18,12 +14,12 @@ function quitarClaseActive () {
     cartasClickeadas.forEach(carta => { carta.classList.remove('active') })
 }
 
-const Juego = ({ elementosDesordenados }: Props) => {
+const Juego = (elementosDesordenados: string[]) => {
     const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         const elemento = e.target as HTMLElement
 
         if (movimientos < 2) {
-            if (!elemento.classList.contains('active') && (!(cartasClickeadas[0] === undefined) || cartasClickeadas[0] !== elemento)) {
+            if (!elemento.classList.contains('active') && (cartasClickeadas[0] !== undefined || cartasClickeadas[0] !== elemento)) {
                 elemento.classList.add('active')
                 cartasClickeadas = [...cartasClickeadas, elemento]
 
@@ -45,6 +41,7 @@ const Juego = ({ elementosDesordenados }: Props) => {
             }
         }
     }
+
     return (
         <ul className='juego'>
             {elementosDesordenados.map(elemento => (

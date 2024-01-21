@@ -1,0 +1,29 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.menu {
+    background-color: v.$blanco;
+    box-shadow: rgba(60, 64, 67, .1) 0 .1rem .2rem 0, 
+                rgba(60, 64, 67, .1) 0 .1rem .3rem .1rem;
+    padding: 1.5rem;
+    margin: .5rem 0 1rem;
+    border-radius: 1rem;
+    @include m.flex {
+        justify-content: space-between; 
+        flex-direction: column
+    }
+
+    .estadisticas {
+        @include m.flex;
+
+        .tiempo, .errores {
+            @include m.flex { gap: .5rem;}
+    
+            svg {
+                width: 1.92rem;
+                height: 1.92rem;
+            }
+        }
+    }
+
+}

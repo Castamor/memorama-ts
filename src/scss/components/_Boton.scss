@@ -1,0 +1,32 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+$tiempo: 200ms;
+$grosor: .5rem;
+
+$btn-negro: #dddddd;
+$btn-negro-borde: #b6b6b6;
+
+.boton {
+    cursor: pointer;
+    font-weight: 500;
+    font-family: v.$fuente;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    border-radius: 1rem;
+    letter-spacing: .15rem;
+    transition: transform $tiempo ease, 
+                box-shadow $tiempo ease;
+
+    &.numero {
+        font-size: 1.6rem;
+        color: v.$negro;
+        background-color: $btn-negro;
+        box-shadow: $btn-negro-borde 0 $grosor 0 0;
+        
+        &:active {
+            transform: translateY($grosor);
+            box-shadow: $btn-negro-borde 0 0 0 0;
+        }
+    }
+}
