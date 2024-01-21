@@ -2,8 +2,8 @@ import { useStorage } from '../store'
 import Boton from './UI/Boton'
 
 const Contador = () => {
-    const cartas = useStorage(state => state.cartas)
-    const setCartas = useStorage(state => state.setCartas)
+    const pares = useStorage(state => state.pares)
+    const setPares = useStorage(state => state.setPares)
 
     return (
         <header>
@@ -11,27 +11,27 @@ const Contador = () => {
             <div className='contador_info'>
                 <Boton
                     className='numero'
-                    onClick={() => { setCartas(-10) }}>
+                    onClick={() => { setPares(-5) }}>
                         -10
                 </Boton>
                 <Boton
                     className='numero'
-                    onClick={() => { setCartas(-2) }}>
+                    onClick={() => { setPares(-1) }}>
                         -2
                 </Boton>
-                <p className='contador'>{cartas * 2}</p>
+                <p className='contador'>{pares * 2}</p>
                 <Boton
                     className='numero'
-                    onClick={() => { setCartas(+2) }}>
+                    onClick={() => { setPares(+1) }}>
                         +2
                 </Boton>
                 <Boton
                     className='numero'
-                    onClick={() => { setCartas(+10) }}>
+                    onClick={() => { setPares(+5) }}>
                         +10
                 </Boton>
             </div>
-            <p className='contador_subtitulo'>( Cantidad de pares: {cartas} )</p>
+            <p className='contador_subtitulo'>( Cantidad de pares: {pares} )</p>
         </header>
     )
 }

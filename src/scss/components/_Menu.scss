@@ -12,18 +12,10 @@
         justify-content: space-between; 
         flex-direction: column
     }
+}
 
-    .estadisticas {
-        @include m.flex;
-
-        .tiempo, .errores {
-            @include m.flex { gap: .5rem;}
-    
-            svg {
-                width: 1.92rem;
-                height: 1.92rem;
-            }
-        }
-    }
-
+.botones-accion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

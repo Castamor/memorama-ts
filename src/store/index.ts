@@ -3,16 +3,16 @@ import { persist } from 'zustand/middleware'
 import { ELEMENTOS } from '../data'
 
 interface StorageTipos {
-    cartas: number
-    setCartas: (valor: number) => void
+    pares: number
+    setPares: (valor: number) => void
 }
 
 export const useStorage = create<StorageTipos>()(persist(
     (set, get) => ({
-        cartas: 4,
-        setCartas (valor) {
+        pares: 4,
+        setPares (valor) {
             let nuevaCantidad: number
-            const cantidadActual = get().cartas
+            const cantidadActual = get().pares
 
             if (cantidadActual + valor > ELEMENTOS.length) {
                 nuevaCantidad = ELEMENTOS.length
@@ -22,7 +22,7 @@ export const useStorage = create<StorageTipos>()(persist(
                 nuevaCantidad = cantidadActual + valor
             }
 
-            set({ cartas: nuevaCantidad })
+            set({ pares: nuevaCantidad })
         }
     }),
     {

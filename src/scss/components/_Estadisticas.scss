@@ -1,0 +1,16 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.estadisticas {
+    width: 100%;
+    @include m.flex {justify-content: space-around;}
+
+    .tiempo, .errores, .cartas {
+        @include m.flex { gap: .4rem;}
+
+        svg {
+            width: 1.92rem;
+            height: 1.92rem;
+        }
+    }
+}
