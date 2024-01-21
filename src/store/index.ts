@@ -9,7 +9,7 @@ interface StorageTipos {
 
 export const useStorage = create<StorageTipos>()(persist(
     (set, get) => ({
-        cartas: 2,
+        cartas: 4,
         setCartas (valor) {
             let nuevaCantidad: number
             const cantidadActual = get().cartas
