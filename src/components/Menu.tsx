@@ -1,16 +1,22 @@
 import Contador from './Contador'
 import Estadisticas from './Estadisticas'
+import { Reiniciar } from './Iconos'
 import Boton from './UI/Boton'
 
 const Menu = () => {
     return (
         <>
-            <section className="menu">
+            <div className='margenes'>
                 <Contador />
-                {/* <Estadisticas /> */}
-            </section>
-            <div className='botones-accion'>
-                <Boton className='iniciar'>Iniciar Juego</Boton>
+                <div className='flex'>
+                    <Boton className='iniciar'>Iniciar Juego</Boton>
+                </div>
+            </div>
+            <div className='margenes flex'>
+                <Estadisticas />
+                <Boton className='reiniciar'>
+                    <Reiniciar />
+                </Boton>
             </div>
         </>
     )

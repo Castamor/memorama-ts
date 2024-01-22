@@ -1,3 +1,5 @@
+@use 'mixins' as m;
+
 body {
     display: grid;
     place-items: center;

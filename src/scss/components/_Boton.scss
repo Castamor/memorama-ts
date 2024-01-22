@@ -10,6 +10,9 @@ $btn-gris-borde: #b6b6b6;
 $btn-rojo: rgb(211, 0, 0);
 $btn-rojo-borde: rgb(181, 0, 0);
 
+$btn-azul: rgb(90, 175, 239);
+$btn-azul-borde: rgb(73, 145, 199);
+
 .boton {
     cursor: pointer;
     font-weight: 500;
@@ -43,6 +46,7 @@ $btn-rojo-borde: rgb(181, 0, 0);
 
     &.iniciar {
         padding: 1rem 1.5rem;
+        margin-bottom: $grosor;
         color: v.$blanco;
         background-color: $btn-rojo;
         box-shadow: $btn-rojo-borde 0 $grosor 0 0;
@@ -50,6 +54,25 @@ $btn-rojo-borde: rgb(181, 0, 0);
         &:active {
             transform: translateY($grosor);
             box-shadow: $btn-rojo-borde 0 0 0 0;
+        }
+    }
+
+    &.reiniciar {
+        @include m.flex;
+        width: 15%;
+        height: calc(4.92rem - $grosor);
+        margin-bottom: $grosor;
+        color: v.$blanco;
+        background-color: $btn-azul;
+        box-shadow: $btn-azul-borde 0 $grosor 0 0;
+
+        &:active {
+            transform: translateY($grosor);
+            box-shadow: $btn-azul-borde 0 0 0 0;
+        }
+
+        svg {
+            width: 2.5rem;
         }
     }
 }

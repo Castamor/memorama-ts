@@ -6,7 +6,7 @@ const Contador = () => {
     const setPares = useStorage(state => state.setPares)
 
     return (
-        <header>
+        <header className='contador fondo-blanco'>
             <p className='contador_titulo'>Elige un total de cartas</p>
             <div className='contador_info'>
                 <Boton
@@ -19,7 +19,7 @@ const Contador = () => {
                     onClick={() => { setPares(-1) }}>
                         -2
                 </Boton>
-                <p className='contador'>{pares * 2}</p>
+                <p className='contador_info-cartas'>{pares * 2}</p>
                 <Boton
                     className='numero'
                     onClick={() => { setPares(+1) }}>

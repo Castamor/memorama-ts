@@ -1,37 +1,40 @@
-@use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.contador_titulo {
-    text-align: center
-}
+.contador {
 
-.contador_info {
-    @include m.flex;
-    margin: 1rem 0;
-    
-    .contador {
-        margin-top: .5rem;
-        display: grid;
-        place-items: center;
-        letter-spacing: .15rem;
-        font-weight: bold;
-        border-radius: .75rem;
-        min-height: 4rem;
+    margin-bottom: 1rem;
 
-        font-size: 2.25rem;
-        min-width: 4rem;
-        
-        @include m.sm {
-            font-size: 3rem;
-            min-width: 8rem;
-        }
-
+    &_titulo {
+        text-align: center
     }
-}
 
-.contador_subtitulo {
-    color: rgba(0, 0, 0, 0.351);
-    margin-top: 1.5rem;
-    text-align: center;
-    font-size: 1.4rem;
+    &_info {
+        @include m.flex;
+        margin: 1rem 0 1.5rem;
+        
+        &-cartas {
+            margin-top: .5rem;
+            display: grid;
+            place-items: center;
+            letter-spacing: .15rem;
+            font-weight: bold;
+            border-radius: .75rem;
+            min-height: 4rem;
+    
+            font-size: 2.25rem;
+            min-width: 4rem;
+            
+            @include m.sm {
+                font-size: 3rem;
+                min-width: 8rem;
+            }
+    
+        }
+    }
+
+    &_subtitulo {
+        color: rgba(0, 0, 0, 0.351);
+        text-align: center;
+        font-size: 1.4rem;
+    }
 }

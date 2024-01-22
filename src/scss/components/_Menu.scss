@@ -1,21 +1,23 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.menu {
+.margenes {
+    margin: 1rem 0 1.5rem;
+}
+
+.fondo-blanco {
+    width: 100%;
     background-color: v.$blanco;
     box-shadow: rgba(60, 64, 67, .1) 0 .1rem .2rem 0, 
                 rgba(60, 64, 67, .1) 0 .1rem .3rem .1rem;
     padding: 1.5rem;
-    margin: .5rem 0 1rem;
     border-radius: 1rem;
-    @include m.flex {
-        justify-content: space-between; 
-        flex-direction: column
-    }
 }
 
-.botones-accion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flex {
+    @include m.flex;
+}
+
+.oculto {
+    display: none;
 }
