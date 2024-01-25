@@ -5,6 +5,8 @@ import { ELEMENTOS } from '../data'
 interface StorageTipos {
     pares: number
     setPares: (valor: number) => void
+    cabeContenido: boolean
+    setCabeContenido: (valor: boolean) => void
 }
 
 export const useStorage = create<StorageTipos>()(persist(
@@ -23,6 +25,10 @@ export const useStorage = create<StorageTipos>()(persist(
             }
 
             set({ pares: nuevaCantidad })
+        },
+        cabeContenido: true,
+        setCabeContenido (valor) {
+            set({ cabeContenido: valor })
         }
     }),
     {

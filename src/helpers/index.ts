@@ -24,18 +24,6 @@ export function formatearArreglo (arreglo: string[], size: number): string[] {
     return arregloDesordenado
 }
 
-export const removerClaseActive = (e: React.MouseEvent<EventTarget>, ELEMENTOS: NodeListOf<Element>) => {
-    const currentTarget = e.currentTarget as Element
-
-    ELEMENTOS.forEach(elemento => {
-        if (elemento.classList.contains('active') && elemento !== currentTarget.parentElement) {
-            elemento.classList.remove('active')
-        }
-    })
-
-    currentTarget.parentElement?.classList.toggle('active')
-}
-
 export const formatearMinutos = (segundos: number): string => {
     const minuto = Math.floor(segundos / 60)
     const segundosRestantes = segundos % 60
@@ -44,4 +32,13 @@ export const formatearMinutos = (segundos: number): string => {
     const segundosFormateados = segundosRestantes < 10 ? `0${segundosRestantes}` : `${segundosRestantes}`
 
     return `${minutoFormateado}:${segundosFormateados}`
+}
+
+export const calcularAltura = () => {
+    const alturaPantalla = window.innerHeight
+    const alturaContenido = document.body.offsetHeight
+
+    alturaPantalla >= alturaContenido
+        ? document.body.classList.add('altura')
+        : document.body.classList.remove('altura')
 }

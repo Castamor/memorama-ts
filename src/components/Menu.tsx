@@ -6,13 +6,13 @@ import Boton from './UI/Boton'
 const Menu = () => {
     return (
         <>
-            <div className='margenes'>
+            <div>
                 <Contador />
                 <div className='flex'>
                     <Boton className='iniciar'>Iniciar Juego</Boton>
                 </div>
             </div>
-            <div className='margenes flex'>
+            <div className='flex'>
                 <Estadisticas />
                 <Boton className='reiniciar'>
                     <Reiniciar />

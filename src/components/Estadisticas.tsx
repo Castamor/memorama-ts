@@ -1,7 +1,6 @@
 import { formatearMinutos } from '../helpers'
 import { useStorage } from '../store'
 import { Cartas, Errores, Tiempo } from './Iconos'
-import Boton from './UI/Boton'
 
 const Estadisticas = () => {
     const cartas = useStorage(state => state.pares * 2)
@@ -9,7 +8,7 @@ const Estadisticas = () => {
         <div className='estadisticas fondo-blanco'>
             <p className='cartas'>
                 <Cartas className='icono'/>
-                <span>{cartas} cartas</span>
+                <span>{`${cartas} cartas`}</span>
             </p>
             <p className='tiempo'>
                 <Tiempo className='icono'/>

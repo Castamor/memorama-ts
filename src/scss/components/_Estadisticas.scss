@@ -3,9 +3,10 @@
 
 .estadisticas {
     width: 100%;
-    @include m.flex {justify-content: space-around;}
+    @include m.flex {justify-content: space-around; gap: 3rem;}
 
     .tiempo, .errores, .cartas {
+        width: max-content;
         @include m.flex { gap: .4rem;}
 
         svg {

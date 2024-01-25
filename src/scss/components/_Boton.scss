@@ -59,7 +59,7 @@ $btn-azul-borde: rgb(73, 145, 199);
 
     &.reiniciar {
         @include m.flex;
-        width: 15%;
+        aspect-ratio: 1/1;
         height: calc(4.92rem - $grosor);
         margin-bottom: $grosor;
         color: v.$blanco;

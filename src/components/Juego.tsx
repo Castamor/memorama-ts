@@ -14,7 +14,11 @@ function quitarClaseActive () {
     cartasClickeadas.forEach(carta => { carta.classList.remove('active') })
 }
 
-const Juego = (elementosDesordenados: string[]) => {
+interface Props {
+    elementosDesordenados: string[]
+}
+
+const Juego = ({ elementosDesordenados }: Props) => {
     const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         const elemento = e.target as HTMLElement
 
@@ -43,7 +47,7 @@ const Juego = (elementosDesordenados: string[]) => {
     }
 
     return (
-        <ul className='juego'>
+        <ul className='juego contenedor-juego'>
             {elementosDesordenados.map(elemento => (
                 <Carta
                     key={generarId()}

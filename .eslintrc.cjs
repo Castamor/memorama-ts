@@ -4,17 +4,17 @@ module.exports = {
         es2021: true
     },
     extends: [
-        "standard-with-typescript",
-        "plugin:react/recommended"
+        'standard-with-typescript',
+        'plugin:react/recommended'
     ],
     overrides: [],
     parserOptions: {
         project: './tsconfig.json',
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module'
     },
     plugins: [
-        "react"
+        'react'
     ],
     rules: {
         'react/prop-types': 'off',
