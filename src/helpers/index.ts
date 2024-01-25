@@ -36,7 +36,12 @@ export const formatearMinutos = (segundos: number): string => {
 
 export const calcularAltura = () => {
     const alturaPantalla = window.innerHeight
-    const alturaContenido = document.body.offsetHeight
+    const alturaContenido = document.querySelector('#root')?.clientHeight
+
+    console.log('ALTURA PANTALLA:\n', alturaPantalla)
+    console.log('ALTURA CONTENIDO:\n', alturaContenido)
+
+    if (alturaContenido === undefined) return
 
     alturaPantalla >= alturaContenido
         ? document.body.classList.add('altura')
